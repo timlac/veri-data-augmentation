@@ -1,7 +1,8 @@
-from constants import metadata_file_mappings
-import librosa
 import pandas as pd
-from src.sound_plots import *
+
+from src.librosa_experiments.sound_plots import *
+from constants import metadata_file_mappings
+
 
 df = pd.read_csv(metadata_file_mappings)
 

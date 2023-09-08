@@ -2,8 +2,23 @@ from matplotlib import pyplot as plt
 import librosa.display
 import librosa
 
+import numpy as np
 
-def create_waveplot(data, sr, e):
+
+def rms_plot(data):
+    # As a first step, we can plot the root-mean-square (RMS) curve
+    rms = librosa.feature.rms(y=data)[0]
+
+    times = librosa.frames_to_time(np.arange(len(rms)))
+
+    fig, ax = plt.subplots()
+    ax.plot(times, rms)
+    ax.set(xlabel='Time', ylabel='RMS')
+
+    plt.show()
+
+
+def create_waveplot(data, sr, e=None):
     plt.figure(figsize=(10, 3))
     plt.title('Waveplot for audio with {} '.format(e), size=15)
     librosa.display.waveshow(data, sr=sr)

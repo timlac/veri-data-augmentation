@@ -1,11 +1,8 @@
 import librosa
 import numpy as np
 import pandas as pd
-from playsound import playsound
-from matplotlib import pyplot as plt
 from sklearn.preprocessing import StandardScaler
 
-from sound_plots import create_waveplot, rms_plot
 from constants import metadata_file_mappings
 
 df = pd.read_csv(metadata_file_mappings)

@@ -1,6 +1,7 @@
 .env
 
 files/data
+files/out
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

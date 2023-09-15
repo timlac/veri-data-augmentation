@@ -4,14 +4,14 @@ from pyannote.audio import Pipeline
 import pandas as pd
 from pathlib import Path
 
-from constants import metadata_file_mappings, ROOT_DIR
+from constants import metadata_file_mappings_path, ROOT_DIR
 import json
 
 
 load_dotenv()
 ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
 
-df = pd.read_csv(metadata_file_mappings)
+df = pd.read_csv(metadata_file_mappings_path)
 
 paths = df["path"].values
 

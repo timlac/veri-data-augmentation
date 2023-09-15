@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 
 
 from src.librosa_experiments.sound_plots import rms_plot
-from constants import metadata_file_mappings
+from constants import metadata_file_mappings_path
 
 
 def analyze_wave(path):
@@ -24,7 +24,7 @@ def analyze_wave(path):
     plt.show()
 
 def main():
-    df = pd.read_csv(metadata_file_mappings)
+    df = pd.read_csv(metadata_file_mappings_path)
 
     paths = df["path"].values
     for path in paths[209:210]:

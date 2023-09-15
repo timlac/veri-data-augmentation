@@ -1,10 +1,10 @@
 import pandas as pd
 
 from src.librosa_experiments.sound_plots import *
-from constants import metadata_file_mappings
+from constants import metadata_file_mappings_path
 
 
-df = pd.read_csv(metadata_file_mappings)
+df = pd.read_csv(metadata_file_mappings_path)
 
 df_accuracy_1 = df[(df.accuracy == 1) & (df.participant == 1)]
 df_accuracy_0 = df[(df.accuracy == 0) & (df.participant == 1)]

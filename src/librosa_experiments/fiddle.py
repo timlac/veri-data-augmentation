@@ -3,9 +3,9 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
-from constants import metadata_file_mappings
+from constants import metadata_file_mappings_path
 
-df = pd.read_csv(metadata_file_mappings)
+df = pd.read_csv(metadata_file_mappings_path)
 
 path2data = {}
 

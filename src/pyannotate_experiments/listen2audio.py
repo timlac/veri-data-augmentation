@@ -1,6 +1,6 @@
 import os
 from playsound import playsound
-from constants import metadata_file_mappings, ROOT_DIR
+from constants import metadata_file_mappings_path, ROOT_DIR
 import json
 
 path = os.path.join(ROOT_DIR, "files/out/wav2rttm.json")
